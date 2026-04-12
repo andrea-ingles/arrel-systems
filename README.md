@@ -1,7 +1,7 @@
 # arrel-systems
 ### **The digital foundation for an autonomous Mediterranean food system.**
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-B5532A.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Framework: Next.js](https://img.shields.io/badge/Framework-Next.js%2015-black)](https://nextjs.org/)
 [![Style: Tailwind v4](https://img.shields.io/badge/Style-Tailwind%20v4-38bdf8)](https://tailwindcss.com/)
 
