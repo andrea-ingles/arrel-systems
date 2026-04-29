@@ -1,48 +1,70 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Lora, DM_Sans } from "next/font/google";
+import type { Metadata } from 'next'
+import { Lora, DM_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import '@/styles/globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+  weight: ['300', '400', '500', '700'],
+})
 
 export const metadata: Metadata = {
-  title: "arrel | autonomous food systems",
-  description: "Engineering rigour meets Mediterranean living. Currently under construction.",
-  icons: {
-    icon: "/favicon.ico", // We will fix this next
+  metadataBase: new URL('https://arrel.systems'),
+  title: {
+    default: 'Arrel — Autonomous Food System',
+    template: '%s · Arrel',
   },
-};
-
-const lora = Lora({ 
-  subsets: ["latin"], 
-  variable: "--font-lora" 
-});
-
-const dmSans = DM_Sans({ 
-  subsets: ["latin"], 
-  variable: "--font-dm-sans" 
-});
+  description:
+    'Designing and building an autonomous circular food system on a Mediterranean finca. Real numbers, honest corrections, monthly documentation.',
+  robots: { index: true, follow: true },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html
-      lang="en"
-    >
+    <html suppressHydrationWarning>
+      <head>
+        <!-- Privacy-friendly analytics by Plausible -->
+        <script async src="https://plausible.io/js/pa-FPLsQaxhUbTYNy6S-sC_C.js"></script>
+        <script>
+          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+          plausible.init()
+        </script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const stored = localStorage.getItem('arrel-theme')
+                if (stored) {
+                  document.documentElement.classList.add(stored)
+                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.add('light')
+                }
+              } catch(e) {}
+            `,
+          }}
+        />
+      </head>
       <body className={`${lora.variable} ${dmSans.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }

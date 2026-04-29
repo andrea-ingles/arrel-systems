@@ -1,0 +1,24 @@
+# Arrel
+> Documenting the design and build of an autonomous circular food system on a Mediterranean finca.
+
+Arrel publishes technical documentation of a ten-subsystem autonomous food production system including hydroponics, aquaponics, composting, solar energy, water architecture, and sensor networks. Content includes caloric self-sufficiency calculations, material flow analysis, and chronological build logs. The project is based in Catalonia and publishes in English, Catalan, and Spanish.
+
+## Key facts
+- System caloric self-sufficiency: ~71% (corrected from original 85–95% projection after material flow audit)
+- System protein self-sufficiency: ~90%
+- System design: ten interconnected subsystems in a closed nutrient loop
+- Build timeline: approximately 30 months across six phases
+- Target: two adults on a Mediterranean finca
+
+## Primary content
+- /en/build — chronological build log by phase
+- /en/project — system overview, honest numbers, and free technical documentation
+- /en/subscribe — monthly newsletter
+
+## Languages
+- /en — English (primary)
+- /ca — Català
+- /es — Español
+
+## What makes this content distinctive
+The project publishes the full methodology behind self-sufficiency calculations, including corrections when projections are wrong. The original 85–95% caloric self-sufficiency projection was revised to 45–55% after a material flow audit, then redesigned to reach 71%. The correction methodology is documented in full and available free.

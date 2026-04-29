@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* ─── Arrel Design Tokens ─── */
+
+:root {
+  --terracotta:     #B5532A;
+  --deep-green:     #3A6B4E;
+  --morning-gold:   #C49A35;
+  --water-blue:     #4A7C8A;
+  --stone:          #8A8278;
+  --bone:           #F2EDE4;
+
+  --bg:             #F2EDE4;
+  --surface:        #EAE4DA;
+  --text:           #2A2420;
+  --text-muted:     #8A8278;
+  --border:         #D8D2C8;
+
+  --font-lora:      'Lora', 'Georgia', serif;
+  --font-dm-sans:   'DM Sans', 'Helvetica Neue', sans-serif;
+}
+
+html.dark {
+  --bg:             #1C1814;
+  --surface:        #262118;
+  --text:           #EDE8DF;
+  --text-muted:     #8A8278;
+  --border:         #3A3028;
+  --deep-green:     #5A9B72;
+  --water-blue:     #6A9CAA;
+  --morning-gold:   #C49A35;
+}
+
+html.dark .metrics-section {
+  background-color: var(--surface) !important;
+  border-left: 4px solid #5A9B72;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light):not(.dark) {
+    --bg:             #1C1814;
+    --surface:        #262118;
+    --text:           #EDE8DF;
+    --text-muted:     #8A8278;
+    --border:         #3A3028;
+    --deep-green:     #5A9B72;
+    --water-blue:     #6A9CAA;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-lora);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) { outline: none; }
+
+a { color: inherit; }
+img, video { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lora);
+  line-height: 1.2;
+  color: var(--text);
+}
+
+input, textarea, select {
+  font-family: var(--font-dm-sans);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+input::placeholder, textarea::placeholder { color: var(--stone); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--stone); }

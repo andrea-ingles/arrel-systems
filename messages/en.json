@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "build": "The Build",
+    "system": "The System",
+    "subscribe": "Subscribe",
+    "menu": "Menu",
+    "close": "Close menu"
+  },
+  "home": {
+    "hero": {
+      "proposition": "Designing and building an autonomous food system — and documenting the life that comes from living inside one.",
+      "sub": "Mediterranean finca · Arrel is the engineering that grows the food.",
+      "cta_primary": "→ Read the build log",
+      "cta_email_placeholder": "your@email.com",
+      "cta_email_submit": "Follow the build",
+      "cta_email_note": "Monthly newsletter. Real numbers. Honest corrections. No performance."
+    },
+    "what": {
+      "label": "The Project",
+      "heading": "Not a homestead. An engineered system.",
+      "body_1": "Most self-sufficiency content does not show the real numbers. We do — including the corrections when they're wrong.",
+      "body_2": "This is the documentation of an autonomous circular food system built on a Mediterranean finca: hydroponics, aquaponics, composting, solar, water architecture, sensor networks, and the food that comes out of all of it. The system produces approximately 71% of the calories and 90% of the protein two adults need. The remainder is rice.",
+      "body_3": "Every calculation is published. Every error is corrected in public. The system is live data."
+    },
+    "metrics": {
+      "label": "From the system today",
+      "ph_value": "6.1",
+      "ph_label": "pH in NFT reservoir",
+      "ph_sub": "target 5.8–6.5",
+      "eggs_value": "31",
+      "eggs_label": "Eggs collected this week",
+      "eggs_sub": "5 hens · 7 days",
+      "cistern_value": "4,200L",
+      "cistern_label": "Cistern level",
+      "cistern_sub": "of 5,000L capacity",
+      "updated": "System metrics will appear here when Phase 2 hydroponics is running.",
+      "placeholder": true
+    },
+    "cards": {
+      "build_label": "The Build",
+      "build_title": "Phase −1: documenting before anything is built",
+      "build_excerpt": "Why the media infrastructure comes first, and what the indoor proof-of-concept will prove before the finca build begins.",
+      "build_link": "→ Read entry",
+      "technical_label": "The System",
+      "technical_title": "Why the self-sufficiency calculation was wrong — and what the corrected number is",
+      "technical_excerpt": "The original projection was 85–95%. After a material flow audit, the corrected figure is 71%. This is how the error was found.",
+      "technical_link": "→ Read the analysis",
+      "newsletter_label": "The Newsletter",
+      "newsletter_title": "Real numbers from a real system, monthly.",
+      "newsletter_excerpt": "Issue 001 covers the planning framework: why self-sufficiency calculations usually fail, and what the actual design looks like.",
+      "newsletter_input_placeholder": "your@email.com",
+      "newsletter_submit": "Subscribe"
+    },
+    "thesis": {
+      "body": "Intelligent people who think rigorously about almost everything have almost nowhere rigorous to go when they want to understand food. The calorie maths is never done. The errors are never corrected. The calculations are never shown. This project exists because that gap is real and because closing it is an engineering problem, not an identity statement.",
+      "link": "→ Read the full project brief"
+    }
+  },
+  "subscribe": {
+    "label": "The Newsletter",
+    "heading": "Monthly. Real numbers. Honest corrections.",
+    "subheading": "Not a content schedule. Documentation that publishes when there is something worth documenting.",
+    "what_label": "What you receive",
+    "what_technical_label": "The Technical Documentation",
+    "what_technical_body": "The mass balance calculations, the material flow tables, the corrected self-sufficiency estimates. The kind of depth that cannot fit in a video.",
+    "what_build_label": "The Build Log",
+    "what_build_body": "What was built, what was measured, what failed, what was changed. Including the numbers from the actual harvest.",
+    "what_data_label": "Live Data",
+    "what_data_body": "Three metrics from the actual system in every issue: pH reading, eggs collected, cistern level. Whatever the number actually is that week.",
+    "segment_label": "What brings you here",
+    "segment_sub": "Select what fits best. You'll receive the same newsletter either way.",
+    "segment_follow_heading": "I want to follow the project",
+    "segment_follow_body": "The narrative, the seasonal rhythm, what the finca looks like at each phase.",
+    "segment_technical_heading": "I want the engineering depth",
+    "segment_technical_body": "The calculations, the material flows, the sensor architecture, the automation design.",
+    "segment_planning_heading": "I'm planning a system of my own",
+    "segment_planning_body": "I want the documentation I can use to design and build a version of this for my situation.",
+    "form_email_placeholder": "your@email.com",
+    "form_submit": "Subscribe to Arrel",
+    "form_note": "No frequency commitment. Unsubscribe at any time. No advertising. No sponsorship in the newsletter itself.",
+    "form_success": "You're subscribed. Issue 001 will arrive when it's ready.",
+    "form_duplicate": "You're already subscribed. Check your inbox for the latest issue.",
+    "form_error": "Something went wrong. Your subscription wasn't saved — please try again.",
+    "form_invalid_email": "Please enter a valid email address.",
+    "preview_label": "Issue 001 — Preview",
+    "preview_heading": "The planning framework: why self-sufficiency calculations usually fail",
+    "preview_body_1": "The first question anyone serious about food autonomy asks is: how many calories does a system need to produce? The second question — which almost no one asks — is: how do you verify that number? The gap between those two questions is where almost every self-sufficiency project fails.",
+    "preview_body_2": "Our original projection placed caloric self-sufficiency at 85–95%. This was not a guess — it was built from a detailed system model with planting schedules, yield tables, and nutritional data. It was also wrong. A subsequent material flow audit found three compounding errors that reduced the figure to 45–55%.",
+    "preview_body_3": "The errors were not random. They followed a pattern that appears in almost every self-sufficiency calculation we have reviewed: optimistic yield assumptions, missing loss factors, and a systematic underestimation of caloric density requirements under physical work conditions. Each error is small. Compounded, they produce projections that bear no relationship to what a system will actually produce.",
+    "preview_body_4": "This issue documents the correction methodology: how the audit was structured, what each error source was, and how the system was redesigned to reach the current figure of 71%. The methodology is transferable. You can apply it to any system design, including one at your own scale.",
+    "preview_link": "→ Subscribe above to receive Issue 001 and all subsequent issues",
+    "frequency_label": "What to expect",
+    "frequency_body_1": "Issues publish when a phase produces enough to document honestly. In active build phases: approximately twice per month. In transition periods: once per month or less.",
+    "frequency_body_2": "Each issue: 1,200–2,500 words. One diagram or photograph. Three real system metrics. No padding, no filler.",
+    "frequency_body_3": "Every issue will still be worth reading in three years."
+  },
+  "footer": {
+    "domain": "arrel.systems",
+    "handle": "@arrel"
+  },
+  "errors": {
+    "not_found_heading": "This page doesn't exist.",
+    "not_found_body": "The build log, the system overview, and the newsletter are all still here.",
+    "not_found_build": "The Build",
+    "not_found_system": "The System",
+    "not_found_subscribe": "Subscribe"
+  },
+  "a11y": {
+    "skip_to_content": "Skip to main content",
+    "toggle_dark_mode": "Toggle dark mode",
+    "toggle_light": "Switch to light mode",
+    "toggle_dark": "Switch to dark mode",
+    "logo_home": "Arrel — return to homepage",
+    "language_select": "Select language",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu"
+  }
+}

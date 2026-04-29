@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "build": "La Construcció",
+    "system": "El Sistema",
+    "subscribe": "Subscriu-te",
+    "menu": "Menú",
+    "close": "Tanca el menú"
+  },
+  "home": {
+    "hero": {
+      "proposition": "[CA] Dissenyant i construint un sistema alimentari autònom — i documentant la vida que neix de viure-hi a dins.",
+      "sub": "[CA] Finca mediterrània · Arrel és l'enginyeria que fa créixer el menjar.",
+      "cta_primary": "→ Llegeix el registre de construcció",
+      "cta_email_placeholder": "el.teu@email.com",
+      "cta_email_submit": "Segueix la construcció",
+      "cta_email_note": "[CA] Butlletí mensual. Xifres reals. Correccions honestes. Sense posturing."
+    },
+    "what": {
+      "label": "El Projecte",
+      "heading": "[CA] No és una masia. És un sistema d'enginyeria.",
+      "body_1": "[CA] La majoria del contingut sobre autosuficiència no mostra les xifres reals. Nosaltres sí — incloses les correccions quan ens equivoquem.",
+      "body_2": "[CA] Aquesta és la documentació d'un sistema alimentari circular autònom construït en una finca mediterrània: hidroponics, aquaponics, compostatge, solar, arquitectura de l'aigua, xarxes de sensors, i el menjar que en surt. El sistema produeix aproximadament el 71% de les calories i el 90% de les proteïnes que necessiten dos adults. La resta és arròs.",
+      "body_3": "[CA] Cada càlcul es publica. Cada error es corregeix en públic. El sistema és dades en viu."
+    },
+    "metrics": {
+      "label": "[CA] Del sistema avui",
+      "ph_value": "6.1",
+      "ph_label": "[CA] pH al dipòsit NFT",
+      "ph_sub": "[CA] objectiu 5.8–6.5",
+      "eggs_value": "31",
+      "eggs_label": "[CA] Ous recollits aquesta setmana",
+      "eggs_sub": "[CA] 5 gallines · 7 dies",
+      "cistern_value": "4.200L",
+      "cistern_label": "[CA] Nivell de la cisterna",
+      "cistern_sub": "[CA] de 5.000L de capacitat",
+      "updated": "[CA] Les mètriques del sistema apareixeran aquí quan la hidroponics de la Fase 2 estigui en marxa.",
+      "placeholder": true
+    },
+    "cards": {
+      "build_label": "La Construcció",
+      "build_title": "[CA] Fase −1: documentant abans que res es construeixi",
+      "build_excerpt": "[CA] Per què la infraestructura de mitjans va primer, i què demostrarà la prova de concepte interior abans que comenci la construcció de la finca.",
+      "build_link": "→ Llegeix l'entrada",
+      "technical_label": "El Sistema",
+      "technical_title": "[CA] Per què el càlcul d'autosuficiència estava malament — i quina és la xifra corregida",
+      "technical_excerpt": "[CA] La projecció original era del 85–95%. Després d'una auditoria de fluxos de materials, la xifra corregida és del 71%. Aquí s'explica com es va trobar l'error.",
+      "technical_link": "→ Llegeix l'anàlisi",
+      "newsletter_label": "El Butlletí",
+      "newsletter_title": "Xifres reals d'un sistema real, cada mes.",
+      "newsletter_excerpt": "[CA] El número 001 cobreix el marc de planificació: per què els càlculs d'autosuficiència solen fallar, i com és el disseny real.",
+      "newsletter_input_placeholder": "el.teu@email.com",
+      "newsletter_submit": "Subscriu-te"
+    },
+    "thesis": {
+      "body": "[CA] La gent intel·ligent que pensa rigorosament sobre gairebé tot no té gairebé cap lloc rigorós on anar quan vol entendre el menjar. Les matemàtiques de les calories mai no es fan. Els errors mai no es corregeixen. Els càlculs mai no es mostren. Aquest projecte existeix perquè aquest buit és real i perquè tancar-lo és un problema d'enginyeria, no una declaració d'identitat.",
+      "link": "→ Llegeix el resum complet del projecte"
+    }
+  },
+  "subscribe": {
+    "label": "El Butlletí",
+    "heading": "[CA] Mensual. Xifres reals. Correccions honestes.",
+    "subheading": "[CA] No és un calendari de continguts. És documentació que es publica quan hi ha alguna cosa que val la pena documentar.",
+    "what_label": "[CA] Què rebràs",
+    "what_technical_label": "[CA] La Documentació Tècnica",
+    "what_technical_body": "[CA] Els càlculs de balanç de massa, les taules de flux de materials, les estimacions d'autosuficiència corregides. El tipus de profunditat que no cap en un vídeo.",
+    "what_build_label": "[CA] El Registre de Construcció",
+    "what_build_body": "[CA] Què s'ha construït, què s'ha mesurat, què ha fallat, què s'ha canviat. Incloses les xifres de la collita real.",
+    "what_data_label": "[CA] Dades en Viu",
+    "what_data_body": "[CA] Tres mètriques del sistema real en cada número: lectura de pH, ous recollits, nivell de cisterna. La xifra que sigui aquella setmana.",
+    "segment_label": "[CA] Què et porta aquí",
+    "segment_sub": "[CA] Tria el que s'adapti millor. Rebràs el mateix butlletí de totes maneres.",
+    "segment_follow_heading": "[CA] Vull seguir el projecte",
+    "segment_follow_body": "[CA] La narrativa, el ritme estacional, com és la finca en cada fase.",
+    "segment_technical_heading": "[CA] Vull la profunditat d'enginyeria",
+    "segment_technical_body": "[CA] Els càlculs, els fluxos de materials, l'arquitectura de sensors, el disseny d'automatització.",
+    "segment_planning_heading": "[CA] Estic planificant el meu propi sistema",
+    "segment_planning_body": "[CA] Vull la documentació que pugui usar per dissenyar i construir una versió d'això per a la meva situació.",
+    "form_email_placeholder": "el.teu@email.com",
+    "form_submit": "[CA] Subscriu-te a Arrel",
+    "form_note": "[CA] Sense compromís de freqüència. Cancel·la la subscripció en qualsevol moment. Sense publicitat. Sense patrocini al butlletí.",
+    "form_success": "[CA] Estàs subscrit. El número 001 arribarà quan estigui llest.",
+    "form_duplicate": "[CA] Ja estàs subscrit. Comprova la teva safata d'entrada.",
+    "form_error": "[CA] Alguna cosa ha anat malament. La teva subscripció no s'ha desat — torna-ho a intentar.",
+    "form_invalid_email": "[CA] Introdueix una adreça de correu electrònic vàlida.",
+    "preview_label": "[CA] Número 001 — Previsualització",
+    "preview_heading": "[CA] El marc de planificació: per què els càlculs d'autosuficiència solen fallar",
+    "preview_body_1": "[CA] La primera pregunta que fa tothom seriós sobre l'autonomia alimentària és: quantes calories necessita produir un sistema? La segona pregunta — que gairebé ningú no fa — és: com verificues aquesta xifra? L'espai entre aquestes dues preguntes és on falla gairebé tot projecte d'autosuficiència.",
+    "preview_body_2": "[CA] La nostra projecció original situava l'autosuficiència calòrica al 85–95%. Això no era una suposició — es va construir a partir d'un model de sistema detallat amb calendaris de plantació, taules de rendiment i dades nutricionals. També estava malament. Una auditoria posterior de flux de materials va trobar tres errors acumulats que van reduir la xifra al 45–55%.",
+    "preview_body_3": "[CA] Els errors no eren aleatoris. Seguien un patró que apareix en gairebé tots els càlculs d'autosuficiència que hem revisat: supòsits optimistes de rendiment, factors de pèrdua que falten, i una subestimació sistemàtica dels requisits de densitat calòrica en condicions de treball físic. Cada error és petit. Acumulats, produeixen projeccions que no guarden cap relació amb el que un sistema produirà realment.",
+    "preview_body_4": "[CA] Aquest número documenta la metodologia de correcció: com es va estructurar l'auditoria, quin era cada font d'error, i com es va redissenyar el sistema per arribar a la xifra actual del 71%. La metodologia és transferible. La pots aplicar a qualsevol disseny de sistema, inclòs un a la teva pròpia escala.",
+    "preview_link": "→ Subscriu-te més amunt per rebre el número 001 i tots els números posteriors",
+    "frequency_label": "[CA] Què esperar",
+    "frequency_body_1": "[CA] Els números es publiquen quan una fase produeix prou per documentar-ho honestament. En fases de construcció actives: aproximadament dues vegades al mes. En períodes de transició: una vegada al mes o menys.",
+    "frequency_body_2": "[CA] Cada número: 1.200–2.500 paraules. Un diagrama o fotografia. Tres mètriques reals del sistema. Sense relleno.",
+    "frequency_body_3": "[CA] Cada número encara valdrà la pena llegir-lo d'aquí a tres anys."
+  },
+  "footer": {
+    "domain": "arrel.systems",
+    "handle": "@arrel"
+  },
+  "errors": {
+    "not_found_heading": "[CA] Aquesta pàgina no existeix.",
+    "not_found_body": "[CA] El registre de construcció, la visió general del sistema i el butlletí estan tots aquí.",
+    "not_found_build": "La Construcció",
+    "not_found_system": "El Sistema",
+    "not_found_subscribe": "Subscriu-te"
+  },
+  "a11y": {
+    "skip_to_content": "[CA] Salta al contingut principal",
+    "toggle_dark_mode": "[CA] Canvia el mode fosc",
+    "toggle_light": "[CA] Canvia al mode clar",
+    "toggle_dark": "[CA] Canvia al mode fosc",
+    "logo_home": "[CA] Arrel — torna a la pàgina principal",
+    "language_select": "[CA] Selecciona l'idioma",
+    "open_menu": "[CA] Obre el menú de navegació",
+    "close_menu": "[CA] Tanca el menú de navegació"
+  }
+}
