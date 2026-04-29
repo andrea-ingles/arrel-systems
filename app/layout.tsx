@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Lora, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
+import Script from 'next/script'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -37,14 +38,17 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
-        <!-- Privacy-friendly analytics by Plausible -->
-        <script async src="https://plausible.io/js/pa-FPLsQaxhUbTYNy6S-sC_C.js"></script>
-        <script>
-          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-          plausible.init()
-        </script>
+        <Script 
+          async 
+          defer 
+          data-domain="arrel.systems"
+          src="https://plausible.io/js/pa-FPLsQaxhUbTYNy6S-sC_C.js"></Script>
+        <Script id="plausible-init">
+          {`window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}`};
+        </Script>
 
-        <script
+        <Script
+          id="theme-handler"
           dangerouslySetInnerHTML={{
             __html: `
               try {
