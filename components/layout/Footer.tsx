@@ -1,10 +1,10 @@
-import { useTranslations } from 'next-intl'
+import { getTranslations, getLocale } from 'next-intl/server'
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
 
-export default function Footer() {
-  const t = useTranslations('footer')
-  const locale = useLocale()
+
+export default async function Footer() {
+  const t = await getTranslations('footer')
+  const locale = await getLocale()
 
   const linkStyle = {
     fontFamily: 'var(--font-dm-sans)',

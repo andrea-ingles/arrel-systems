@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { NextIntlClientProvider } from 'next-intl'
+import { getTranslations, getMessages  } from 'next-intl/server'
 import { locales, type Locale } from '@/lib/i18n-config'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -48,7 +48,7 @@ export async function generateMetadata({
   }
 }
 
-export default function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = params
 
   if (!locales.includes(locale as Locale)) {
@@ -56,7 +56,7 @@ export default function LocaleLayout({ children, params }: Props) {
   }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const messages = useMessages()
+  const messages = await getMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning>
