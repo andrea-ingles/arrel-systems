@@ -116,5 +116,9 @@
     "language_select": "Select language",
     "open_menu": "Open navigation menu",
     "close_menu": "Close navigation menu"
+  },
+  "build": {
+    "heading": "Build Log",
+    "placeholder": "Phase −1 underway — first issue in preparation."
   }
 }

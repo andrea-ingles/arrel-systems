@@ -116,5 +116,9 @@
     "language_select": "Seleccionar idioma",
     "open_menu": "Abrir menú de navegación",
     "close_menu": "Cerrar menú de navegación"
+  },
+  "build": {
+    "heading": "Registro de construcción",
+    "placeholder": "Fase −1 en curso — primer número en preparación."
   }
 }

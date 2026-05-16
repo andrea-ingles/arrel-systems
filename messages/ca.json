@@ -116,5 +116,9 @@
     "language_select": "Selecciona l'idioma",
     "open_menu": "Obre el menú de navegació",
     "close_menu": "Tanca el menú de navegació"
+  },
+  "build": {
+    "heading": "Registre de construcció",
+    "placeholder": "Fase −1 en curs — primer número en preparació."
   }
 }
