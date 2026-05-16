@@ -4,19 +4,20 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 import { emailZodSchema } from '@/lib/validateEmail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID ?? ''
-
-// Allow 5 subscription attempts per IP per 10 minutes.
-// Upstash Redis credentials are read from UPSTASH_REDIS_REST_URL and
-// UPSTASH_REDIS_REST_TOKEN environment variables (see .env.example).
-const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(5, '10 m'),
-  analytics: false,
-})
-
 export async function POST(req: NextRequest) {
+
+  // Allow 5 subscription attempts per IP per 10 minutes.
+  // Upstash Redis credentials are read from UPSTASH_REDIS_REST_URL and
+  // UPSTASH_REDIS_REST_TOKEN environment variables (see .env.example).
+  const resend = new Resend(process.env.RESEND_API_KEY)
+  const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID ?? ''
+  const ratelimit = new Ratelimit({
+    redis: Redis.fromEnv(),
+    limiter: Ratelimit.slidingWindow(5, '10 m'),
+    analytics: false,
+  })
+
+
   // ── Rate limiting ────────────────────────────────────────────
   const ip =
     req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'anonymous'
