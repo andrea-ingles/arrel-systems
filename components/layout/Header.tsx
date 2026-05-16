@@ -100,6 +100,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
+              aria-current={pathname.startsWith(href) ? 'page' : undefined}
               style={{
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '14px',
@@ -215,6 +216,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
+                aria-current={pathname.startsWith(href) ? 'page' : undefined}
                 onClick={() => setMenuOpen(false)}
                 style={{
                   fontFamily: 'var(--font-lora)',

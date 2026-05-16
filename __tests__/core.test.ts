@@ -95,8 +95,8 @@ describe('i18n-config', () => {
     expect(locales).toContain('es')
   })
 
-  it('default locale is en', () => {
-    expect(defaultLocale).toBe('en')
+  it('default locale is ca', () => {
+    expect(defaultLocale).toBe('ca')
   })
 
   it('has labels for all locales', () => {
@@ -109,5 +109,45 @@ describe('i18n-config', () => {
     expect(localeLabels.en).toBe('ENG')
     expect(localeLabels.ca).toBe('CAT')
     expect(localeLabels.es).toBe('ESP')
+  })
+})
+
+
+// ─── i18n key parity ─────────────────────────────────────────
+
+function getAllKeys(obj: Record<string, unknown>, prefix = ''): string[] {
+  return Object.entries(obj).flatMap(([k, v]) => {
+    const full = prefix ? `${prefix}.${k}` : k
+    return v !== null && typeof v === 'object'
+      ? getAllKeys(v as Record<string, unknown>, full)
+      : [full]
+  })
+}
+
+describe('i18n key parity — ca vs en', () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const en = require('../messages/en.json') as Record<string, unknown>
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const ca = require('../messages/ca.json') as Record<string, unknown>
+
+  const enKeys = getAllKeys(en)
+  const caKeys = new Set(getAllKeys(ca))
+
+  it.each(enKeys)('ca.json has key: %s', (key) => {
+    expect(caKeys.has(key)).toBe(true)
+  })
+})
+
+describe('i18n key parity — es vs en', () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const en = require('../messages/en.json') as Record<string, unknown>
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const es = require('../messages/es.json') as Record<string, unknown>
+
+  const enKeys = getAllKeys(en)
+  const esKeys = new Set(getAllKeys(es))
+
+  it.each(enKeys)('es.json has key: %s', (key) => {
+    expect(esKeys.has(key)).toBe(true)
   })
 })

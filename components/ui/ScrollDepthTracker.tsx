@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
+import { trackEvent } from '@/lib/analytics'
 
 const THRESHOLDS = [25, 50, 75, 90]
 
@@ -21,11 +22,10 @@ export default function ScrollDepthTracker() {
       for (const threshold of THRESHOLDS) {
         if (pct >= threshold && !fired.current.has(threshold)) {
           fired.current.add(threshold)
-          if (typeof window !== 'undefined' && (window as any).plausible) {
-            ;(window as any).plausible('ScrollDepth', {
-              props: { depth: String(threshold), page: pathname },
-            })
-          }
+          trackEvent('ScrollDepth', {
+            depth: String(threshold),
+            page: pathname,
+          })
         }
       }
     }
@@ -36,3 +36,4 @@ export default function ScrollDepthTracker() {
 
   return null
 }
+

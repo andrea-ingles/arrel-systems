@@ -38,7 +38,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: '/og/default.jpg',
+          url: '/og/default.png',
           width: 1200,
           height: 630,
           alt: 'Arrel — Autonomous Food System',
@@ -60,6 +60,20 @@ export default function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Arrel',
+              url: `https://arrel.systems/${locale}`,
+              inLanguage: locale === 'ca' ? 'ca' : locale === 'es' ? 'es' : 'en',
+            }),
+          }}
+        />
+      </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SkipLink />
@@ -73,3 +87,4 @@ export default function LocaleLayout({ children, params }: Props) {
     </html>
   )
 }
+

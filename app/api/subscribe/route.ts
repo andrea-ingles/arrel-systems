@@ -1,11 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 import { emailZodSchema } from '@/lib/validateEmail'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID ?? ''
 
+// Allow 5 subscription attempts per IP per 10 minutes.
+// Upstash Redis credentials are read from UPSTASH_REDIS_REST_URL and
+// UPSTASH_REDIS_REST_TOKEN environment variables (see .env.example).
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(5, '10 m'),
+  analytics: false,
+})
+
 export async function POST(req: NextRequest) {
+  // ── Rate limiting ────────────────────────────────────────────
+  const ip =
+    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'anonymous'
+
+  const { success } = await ratelimit.limit(ip)
+  if (!success) {
+    return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
+  }
+
+  // ── Parse body ───────────────────────────────────────────────
   let body: unknown
   try {
     body = await req.json()
@@ -13,7 +34,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'invalid_json' }, { status: 400 })
   }
 
-  // Server-side validation (cannot be bypassed)
+  // ── Server-side validation (cannot be bypassed) ──────────────
   const parsed = emailZodSchema.safeParse(body)
   if (!parsed.success) {
     console.error('[subscribe] Validation error', parsed.error.flatten())
@@ -25,7 +46,12 @@ export async function POST(req: NextRequest) {
   try {
     // Check if already subscribed
     const { data: contacts } = await resend.contacts.list({ audienceId: AUDIENCE_ID })
-    const existing = contacts?.data?.find((c: any) => c.email === email)
+
+    // Resend SDK does not export a named Contact type at the top level;
+    // we inline the minimal shape we need here.
+    const existing = contacts?.data?.find(
+      (c: { email: string; unsubscribed: boolean }) => c.email === email
+    )
 
     if (existing && !existing.unsubscribed) {
       return NextResponse.json({ message: 'already_subscribed' }, { status: 409 })
@@ -40,8 +66,9 @@ export async function POST(req: NextRequest) {
 
     console.info('[subscribe] Success', { source, segment, locale })
     return NextResponse.json({ message: 'subscribed' }, { status: 200 })
-  } catch (err: any) {
-    console.error('[subscribe] Resend error', err?.message ?? err)
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    console.error('[subscribe] Resend error', message)
     return NextResponse.json({ error: 'provider_error' }, { status: 500 })
   }
 }

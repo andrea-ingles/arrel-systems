@@ -112,11 +112,13 @@ export default function SubscribePage() {
             gap: '24px',
           }}
         >
-          {[
-            { labelKey: 'what_technical_label', bodyKey: 'what_technical_body', color: 'var(--water-blue)' },
-            { labelKey: 'what_build_label', bodyKey: 'what_build_body', color: 'var(--terracotta)' },
-            { labelKey: 'what_data_label', bodyKey: 'what_data_body', color: 'var(--stone)' },
-          ].map(({ labelKey, bodyKey, color }) => (
+          {(
+            [
+              { labelKey: 'what_technical_label', bodyKey: 'what_technical_body', color: 'var(--water-blue)' },
+              { labelKey: 'what_build_label', bodyKey: 'what_build_body', color: 'var(--terracotta)' },
+              { labelKey: 'what_data_label', bodyKey: 'what_data_body', color: 'var(--stone)' },
+            ] as const
+          ).map(({ labelKey, bodyKey, color }) => (
             <div
               key={labelKey}
               style={{
@@ -135,7 +137,7 @@ export default function SubscribePage() {
                   margin: '0 0 12px',
                 }}
               >
-                {t(labelKey as any)}
+                {t(labelKey)}
               </p>
               <p
                 style={{
@@ -146,7 +148,7 @@ export default function SubscribePage() {
                   margin: 0,
                 }}
               >
-                {t(bodyKey as any)}
+                {t(bodyKey)}
               </p>
             </div>
           ))}
@@ -242,7 +244,7 @@ export default function SubscribePage() {
             {t('preview_heading')}
           </h2>
 
-          {['preview_body_1', 'preview_body_2', 'preview_body_3', 'preview_body_4'].map((key) => (
+          {(['preview_body_1', 'preview_body_2', 'preview_body_3', 'preview_body_4'] as const).map((key) => (
             <p
               key={key}
               style={{
@@ -253,7 +255,7 @@ export default function SubscribePage() {
                 margin: '0 0 20px',
               }}
             >
-              {t(key as any)}
+              {t(key)}
             </p>
           ))}
 
@@ -296,7 +298,7 @@ export default function SubscribePage() {
           {t('frequency_label')}
         </p>
 
-        {['frequency_body_1', 'frequency_body_2', 'frequency_body_3'].map((key, i) => (
+        {(['frequency_body_1', 'frequency_body_2', 'frequency_body_3'] as const).map((key, i) => (
           <p
             key={key}
             style={{
@@ -308,7 +310,7 @@ export default function SubscribePage() {
               fontStyle: i === 2 ? 'italic' : 'normal',
             }}
           >
-            {t(key as any)}
+            {t(key)}
           </p>
         ))}
       </section>

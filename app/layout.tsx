@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Lora, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import '@/styles/globals.css'
-import Script from 'next/script'
+import "@/styles/globals.css"
 
 const lora = Lora({
   subsets: ['latin'],
@@ -38,17 +37,21 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
-        <Script 
-          async 
-          defer 
-          data-domain="arrel.systems"
-          src="https://plausible.io/js/pa-FPLsQaxhUbTYNy6S-sC_C.js"></Script>
-        <Script id="plausible-init">
-          {`window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}`};
-        </Script>
-
-        <Script
-          id="theme-handler"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Arrel',
+              url: 'https://arrel.systems',
+              description:
+                'Designing and building an autonomous circular food system on a Mediterranean finca. Real numbers, honest corrections, monthly documentation.',
+              sameAs: ['https://youtube.com/@arrel'],
+            }),
+          }}
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -72,3 +75,4 @@ export default function RootLayout({
     </html>
   )
 }
+

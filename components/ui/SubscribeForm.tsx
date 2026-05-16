@@ -3,6 +3,7 @@
 import { useState, useId } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { validateEmail } from '@/lib/validateEmail'
+import { trackEvent } from '@/lib/analytics'
 
 type Segment = 'follow-the-build' | 'technical-specs' | 'finca-planning' | null
 
@@ -41,18 +42,17 @@ export default function SubscribeForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, segment, source, locale }),
       })
-      const data = await res.json()
+      await res.json()
 
       if (res.status === 409) {
         setStatus('duplicate')
       } else if (res.ok) {
         setStatus('success')
-        // Fire Plausible event
-        if (typeof window !== 'undefined' && (window as any).plausible) {
-          ;(window as any).plausible('EmailCapture', {
-            props: { segment: segment ?? 'none', source, page: window.location.pathname },
-          })
-        }
+        trackEvent('EmailCapture', {
+          segment: segment ?? 'none',
+          source,
+          page: window.location.pathname,
+        })
       } else {
         setStatus('error')
       }
@@ -236,7 +236,7 @@ export default function SubscribeForm({
           }}
           aria-busy={isLoading}
         >
-          {isLoading ? '···' : (variant === 'segmented' ? t('form_submit') : t('segment_follow_heading').split(' ')[0] === 'I' ? 'Follow the build' : t('form_submit'))}
+          {isLoading ? '···' : t(variant === 'segmented' ? 'form_submit' : 'form_submit_inline')}
         </button>
       </div>
     </div>
