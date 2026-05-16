@@ -1,12 +1,17 @@
-import { getTranslations } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import { locales } from '@/lib/i18n-config'
 import HomePageClient from './Homepageclient'
 
-export async function generateMetadata({
-  params,
-}: {
+interface Props {
   params: { locale: string }
-}): Promise<Metadata> {
+}
+ 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
+export async function generateMetadata({ params}: Props): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'home.hero' })
   return {
     title: 'Arrel — Autonomous Food System',
@@ -14,8 +19,8 @@ export async function generateMetadata({
   }
 }
 
-export default function HomePage() {
-
+export default function HomePage({ params }: { params: { locale: string } }) {
+  setRequestLocale(params.locale)
   return <HomePageClient />
      
 }

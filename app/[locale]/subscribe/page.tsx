@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { locales } from '@/lib/i18n-config'
 import SubscribePageClient from './Subscribepageclient'
@@ -19,6 +19,7 @@ export async function generateMetadata({ params}: Props): Promise<Metadata> {
   }
 }
 
-export default function SubscribePage() {
+export default function SubscribePage({ params }: Props) {
+  setRequestLocale(params.locale)
   return <SubscribePageClient />
 }

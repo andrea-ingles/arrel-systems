@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { locales } from '@/lib/i18n-config'
 import BuildPageClient from './Buildpageclient'
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function BuildPage() {
+export default function BuildPage({ params }: Props) {
+  setRequestLocale(params.locale)
   return <BuildPageClient />
 }
