@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "build": "La Construction",
+    "system": "Le Système",
+    "subscribe": "S'abonner",
+    "menu": "Menu",
+    "close": "Fermer le menu"
+  },
+  "home": {
+    "hero": {
+      "proposition": "Concevoir et construire un système alimentaire autonome — et documenter la vie qui naît d'y habiter.",
+      "sub": "Finca méditerranéenne · Arrel est l'ingénierie qui fait pousser la nourriture.",
+      "cta_primary": "→ Lire le journal de construction",
+      "cta_email_placeholder": "ton@email.com",
+      "cta_email_submit": "Suivre la construction",
+      "cta_email_note": "Bulletin mensuel. Chiffres réels. Corrections honnêtes. Sans posturing."
+    },
+    "what": {
+      "label": "Le Projet",
+      "heading": "Ce n'est pas une ferme. C'est un système d'ingénierie.",
+      "body_1": "La plupart des contenus sur l'autosuffisance ne montrent pas les vrais chiffres. Nous, si — y compris les corrections quand on se trompe.",
+      "body_2": "Voici la documentation d'un système alimentaire circulaire autonome construit sur une finca méditerranéenne : hydroponie, aquaponie, compostage, solaire, architecture de l'eau, réseaux de capteurs, et la nourriture qui en sort. Le système produit environ 71 % des calories et 90 % des protéines dont deux adultes ont besoin. Le reste, c'est du riz.",
+      "body_3": "Chaque calcul est publié. Chaque erreur est corrigée publiquement. Le système est des données en direct."
+    },
+    "metrics": {
+      "label": "Du système aujourd'hui",
+      "ph_value": "6,1",
+      "ph_label": "pH dans le réservoir NFT",
+      "ph_sub": "objectif  5,8–6,5",
+      "eggs_value": "31",
+      "eggs_label": "Œufs récoltés cette semaine",
+      "eggs_sub": "5 poules  · 7 jours",
+      "cistern_value": "4.200L",
+      "cistern_label": "Niveau de la citerne",
+      "cistern_sub": "sur 5 000 L de capacité",
+      "updated": "Les métriques du système apparaîtront ici quand l'hydroponie de la Phase 2 sera en marche.",
+      "placeholder": true
+    },
+    "cards": {
+      "build_label": "La Construction",
+      "build_title": "Phase −1 : documenter avant que rien ne soit construit",
+      "build_excerpt": "Pourquoi l'infrastructure média passe en premier, et ce que la preuve de concept intérieure démontrera avant que la construction de la finca commence.",
+      "build_link": "→ Lire l'entrée",
+      "technical_label": "Le Système",
+      "technical_title": "Pourquoi le calcul d'autosuffisance était faux — et quel est le chiffre corrigé",
+      "technical_excerpt": "La projection initiale était de 85–95 %. Après un audit des flux de matières, le chiffre corrigé est de 71 %. Voici comment l'erreur a été trouvée.",
+      "technical_link": "→ Lire l'analyse",
+      "newsletter_label": "Le Bulletin",
+      "newsletter_title": "Des chiffres réels d'un système réel, chaque mois.",
+      "newsletter_excerpt": "Le numéro 001 couvre le cadre de planification : pourquoi les calculs d'autosuffisance échouent souvent, et à quoi ressemble la conception réelle.",
+      "newsletter_input_placeholder": "ton@email.com",
+      "newsletter_submit": "S'abonner"
+    },
+    "thesis": {
+      "body": "Les personnes intelligentes qui pensent rigoureusement à presque tout n'ont presque nulle part de rigoureux où aller quand elles veulent comprendre la nourriture. Les mathématiques des calories ne sont jamais faites. Les erreurs ne sont jamais corrigées. Les calculs ne sont jamais montrés. Ce projet existe parce que ce vide est réel et parce que le combler est un problème d'ingénierie, pas une déclaration d'identité.",
+      "link": "→ Lire le résumé complet du projet"
+    }
+  },
+  "subscribe": {
+    "label": "Le Bulletin",
+    "heading": "Mensuel. Chiffres réels. Corrections honnêtes.",
+    "subheading": "Ce n'est pas un calendrier éditorial. C'est de la documentation publiée quand il y a quelque chose qui vaut la peine d'être documenté.",
+    "what_label": "Ce que tu recevras",
+    "what_technical_label": "La Documentation Technique",
+    "what_technical_body": "Les calculs de bilan de masse, les tableaux de flux de matières, les estimations d'autosuffisance corrigées. Le type de profondeur qui ne tient pas dans une vidéo.",
+    "what_build_label": "Le Journal de Construction",
+    "what_build_body": "Ce qui a été construit, ce qui a été mesuré, ce qui a échoué, ce qui a changé. Y compris les chiffres de la récolte réelle.",
+    "what_data_label": "Données en Direct",
+    "what_data_body": "Trois métriques du système réel dans chaque numéro : lecture du pH, œufs récoltés, niveau de citerne. Le chiffre de la semaine.",
+    "segment_label": "Ce qui t'amène ici",
+    "segment_sub": "Choisis ce qui correspond le mieux. Tu recevras le même bulletin de toute façon.",
+    "segment_follow_heading": "Je veux suivre le projet",
+    "segment_follow_body": "La narration, le rythme saisonnier, à quoi ressemble la finca à chaque phase.",
+    "segment_technical_heading": "Je veux la profondeur d'ingénierie",
+    "segment_technical_body": "Les calculs, les flux de matières, l'architecture des capteurs, la conception de l'automatisation.",
+    "segment_planning_heading": "Je planifie mon propre système",
+    "segment_planning_body": "Je veux la documentation que je peux utiliser pour concevoir et construire une version de cela pour ma situation.",
+    "form_email_placeholder": "ton@email.com",
+    "form_submit": "S'abonner à Arrel",
+    "form_submit_inline": "S'abonner à Arrel",
+    "form_note": "Sans engagement de fréquence. Désabonnement à tout moment. Sans publicité. Sans parrainage dans le bulletin.",
+    "form_success": "Tu es abonné. Le numéro 001 arrivera quand il sera prêt.",
+    "form_duplicate": "Tu es déjà abonné. Vérifie ta boîte de réception.",
+    "form_error": "Quelque chose a mal tourné. Ton abonnement n'a pas été enregistré — réessaie.",
+    "form_invalid_email": "Saisis une adresse e-mail valide.",
+    "preview_label": "Numéro 001 — Aperçu",
+    "preview_heading": "Le cadre de planification : pourquoi les calculs d'autosuffisance échouent souvent",
+    "preview_body_1": "La première question que pose toute personne sérieuse sur l'autonomie alimentaire est : combien de calories un système doit-il produire ? La deuxième question — que presque personne ne pose — est : comment vérifies-tu ce chiffre ? L'espace entre ces deux questions est là où échoue presque tout projet d'autosuffisance.",
+    "preview_body_2": "Notre projection initiale situait l'autosuffisance calorique à 85–95 %. Ce n'était pas une hypothèse — elle était construite à partir d'un modèle de système détaillé avec des calendriers de semis, des tableaux de rendement et des données nutritionnelles. Elle était aussi fausse. Un audit ultérieur des flux de matières a trouvé trois erreurs cumulées qui ont ramené le chiffre à 45–55 %.",
+    "preview_body_3": "Les erreurs n'étaient pas aléatoires. Elles suivaient un schéma qui apparaît dans presque tous les calculs d'autosuffisance que nous avons examinés : hypothèses de rendement optimistes, facteurs de perte manquants, et une sous-estimation systématique des besoins en densité calorique dans des conditions de travail physique. Chaque erreur est petite. Cumulées, elles produisent des projections qui n'ont aucun rapport avec ce qu'un système produira réellement.",
+    "preview_body_4": "Ce numéro documente la méthodologie de correction : comment l'audit a été structuré, quelle était chaque source d'erreur, et comment le système a été repensé pour atteindre le chiffre actuel de 71 %. La méthodologie est transférable. Tu peux l'appliquer à n'importe quelle conception de système, y compris à ta propre échelle.",
+    "preview_link": "→ Abonne-toi ci-dessus pour recevoir le numéro 001 et tous les numéros suivants",
+    "frequency_label": "À quoi s'attendre",
+    "frequency_body_1": "Les numéros sont publiés quand une phase produit assez pour être documentée honnêtement. En phases de construction actives : environ deux fois par mois. En périodes de transition : une fois par mois ou moins.",
+    "frequency_body_2": "Chaque numéro : 1 200–2 500 mots. Un schéma ou une photographie. Trois métriques réelles du système. Sans remplissage.",
+    "frequency_body_3": "Chaque numéro vaudra encore la peine d'être lu dans trois ans."
+  },
+  "footer": {
+    "domain": "arrel.systems",
+    "handle": "@arrelSystems",
+    "legal": "Mentions légales et confidentialité"
+  },
+  "errors": {
+    "not_found_heading": "Cette page n'existe pas.",
+    "not_found_body": "Le journal de construction, la vue d'ensemble du système et le bulletin sont tous ici.",
+    "not_found_build": "La Construction",
+    "not_found_system": "Le Système",
+    "not_found_subscribe": "S'abonner"
+  },
+  "a11y": {
+    "skip_to_content": "Aller au contenu principal",
+    "toggle_dark_mode": "Basculer le mode sombre",
+    "toggle_light": "Passer en mode clair",
+    "toggle_dark": "Passer en mode sombre",
+    "logo_home": "Arrel — retour à la page d'accueil",
+    "language_select": "Sélectionner la langue",
+    "open_menu": "Ouvrir le menu de navigation",
+    "close_menu": "Fermer le menu de navigation"
+  },
+  "build": {
+    "heading": "Journal de construction",
+    "placeholder": "Phase −1 en cours — premier numéro en préparation."
+  },
+  "project": {
+    "heading": "Le Système",
+    "placeholder": "Documentation du système en préparation — conception, calculs et corrections seront publiés ici."
+  }
+}
