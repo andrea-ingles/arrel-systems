@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { locales } from '@/lib/i18n-config'
-import ProjectPageClient from './ProjectPageClient'
+import ProjectPageClient from './Projectpageclient'
 
 interface Props {
   params: { locale: string }
