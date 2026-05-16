@@ -99,7 +99,7 @@ export default function Header() {
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
-              href={href}
+              href={href as any}
               aria-current={pathname.startsWith(href) ? 'page' : undefined}
               style={{
                 fontFamily: 'var(--font-dm-sans)',
@@ -215,7 +215,7 @@ export default function Header() {
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
-                href={href}
+                href={href as any}
                 aria-current={pathname.startsWith(href) ? 'page' : undefined}
                 onClick={() => setMenuOpen(false)}
                 style={{

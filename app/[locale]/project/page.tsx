@@ -15,13 +15,13 @@ export async function generateMetadata({
   }
 }
 
-export default function BuildPage() {
-  const t = useTranslations('build')
+export default function ProjectPage() {
+  const t = useTranslations('project')
 
   return (
     <>
       <section
-        aria-labelledby="build-heading"
+        aria-labelledby="project-heading"
         style={{
           paddingTop: 'calc(56px + 80px)',
           paddingBottom: '80px',
@@ -32,7 +32,7 @@ export default function BuildPage() {
         }}
       >
         <h1
-          id="build-heading"
+          id="project-heading"
           style={{
             fontFamily: 'var(--font-lora)',
             fontSize: 'clamp(32px, 4vw, 48px)',
