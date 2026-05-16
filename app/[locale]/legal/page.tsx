@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { locales } from '@/lib/i18n-config'
+import { setRequestLocale } from 'next-intl/server'
 
 // TODO i18n: Legal page body is currently English-only. Full translation
 // (ca + es) is deferred until native-speaker review of legal copy is complete.
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function LegalPage() {
+export default function LegalPage({ params }: Props) {
+  setRequestLocale(params.locale)
   return (
     <section
       aria-labelledby="legal-heading"
