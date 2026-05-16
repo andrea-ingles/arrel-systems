@@ -20,7 +20,7 @@ export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: 'home.hero' })
+  //const t = await getTranslations({ locale, namespace: 'home.hero' })
 
   const alternates: Record<string, string> = {}
   locales.forEach((l) => {
