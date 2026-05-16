@@ -120,5 +120,9 @@
   "build": {
     "heading": "Registro de construcción",
     "placeholder": "Fase −1 en curso — primer número en preparación."
+  },
+  "project": {
+    "heading": "El Sistema",
+    "placeholder": "Documentación del sistema en preparación — diseño, cálculos y correcciones se publicarán aquí."
   }
 }
