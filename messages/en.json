@@ -120,5 +120,9 @@
   "build": {
     "heading": "Build Log",
     "placeholder": "Phase −1 underway — first issue in preparation."
+  },
+  "project": {
+    "heading": "The System",
+    "placeholder": "System documentation in preparation — design, calculations, and corrections will be published here."
   }
 }
