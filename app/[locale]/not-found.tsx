@@ -58,7 +58,7 @@ export default function NotFound() {
         ].map(({ href, label }) => (
           <Link
             key={href}
-            href={href}
+            href={href as any}
             style={{
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '15px',
