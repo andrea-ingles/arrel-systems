@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { getTranslations, getMessages  } from 'next-intl/server'
+import { setRequestLocale, getTranslations, getMessages  } from 'next-intl/server'
 import { locales, type Locale } from '@/lib/i18n-config'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import SkipLink from '@/components/ui/SkipLink'
+import Script from 'next/script'
 
 interface Props {
   children: React.ReactNode
@@ -55,6 +56,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound()
   }
 
+  setRequestLocale(locale)
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const messages = await getMessages()
 
@@ -72,6 +75,12 @@ export default async function LocaleLayout({ children, params }: Props) {
               inLanguage: locale === 'ca' ? 'ca' : locale === 'es' ? 'es' : 'en',
             }),
           }}
+        />
+        <Script
+          defer
+          data-domain="arrel.systems"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
         />
       </head>
       <body>
