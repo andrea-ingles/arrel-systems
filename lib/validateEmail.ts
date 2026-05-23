@@ -17,7 +17,7 @@ export const emailZodSchema = z.object({
   email: z.string().email(),
   segment: z.enum(['follow-the-build', 'technical-specs', 'finca-planning']).nullable().optional(),
   source: z.string().optional(),
-  locale: z.enum(['en', 'ca', 'es']).optional(),
+  locale: z.enum(['en', 'ca', 'fr']).optional(),
 })
 
 export type SubscribePayload = z.infer<typeof emailZodSchema>
