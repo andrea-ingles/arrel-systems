@@ -79,7 +79,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <Script
           defer
           data-domain="arrel.systems"
-          src="https://plausible.io/js/script.js"
+          src="https://plausible.io/js/script.tagged-events.js"
           strategy="afterInteractive"
         />
       </head>
