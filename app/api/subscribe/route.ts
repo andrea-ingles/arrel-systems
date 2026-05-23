@@ -46,7 +46,12 @@ export async function POST(req: NextRequest) {
 
   try {
     // Check if already subscribed
-    const { data: contacts } = await resend.contacts.list({ audienceId: AUDIENCE_ID })
+    const { data: contacts, error: listError } = await resend.contacts.list({ audienceId: AUDIENCE_ID })
+
+    if (listError) {
+      console.error('[subscribe] Failed to list contacts', listError)
+      return NextResponse.json({ error: 'provider_error' }, { status: 500 })
+    }
 
     // Resend SDK does not export a named Contact type at the top level;
     // we inline the minimal shape we need here.
@@ -59,11 +64,16 @@ export async function POST(req: NextRequest) {
     }
 
     // Add or re-subscribe contact
-    await resend.contacts.create({
+    const { error: createError } = await resend.contacts.create({
       audienceId: AUDIENCE_ID,
       email,
       unsubscribed: false,
     })
+
+    if (createError) {
+      console.error('[subscribe] Failed to create contact', createError)
+      return NextResponse.json({ error: 'provider_error' }, { status: 500 })
+    }
 
     console.info('[subscribe] Success', { source, segment, locale })
     return NextResponse.json({ message: 'subscribed' }, { status: 200 })
